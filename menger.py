@@ -1,3 +1,8 @@
+"""menger.py - generate OpenSCAD-compatible descriptions of Menger sponges
+Takes a single argument n, an integer number of iterations to run.
+Prints OpenSCAD code to stdout.
+"""
+
 import argparse
 
 CUBE = "cube(size=1);\n"
