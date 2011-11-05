@@ -50,11 +50,11 @@ def printSponge(iterations):
 
 def main():
 	parser = argparse.ArgumentParser(description="Make a Menger sponge for OpenSCAD.")
-	parser.add_argument('N')
+	parser.add_argument('n')
 	args = parser.parse_args()
 	try:
-		iters = args.n
-	except AttributeError:
+		iters = int(args.n)
+	except AttributeError, ValueError:
 		iters = 1
 	printSponge(iters)
 	
